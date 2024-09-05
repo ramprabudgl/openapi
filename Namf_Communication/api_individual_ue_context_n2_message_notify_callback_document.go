@@ -7,8 +7,8 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/free5gc/openapi"
-	"github.com/free5gc/openapi/models"
+	"github.com/ramprabudgl/openapi"
+	"github.com/ramprabudgl/openapi/models"
 )
 
 // Linger please
