@@ -23,6 +23,7 @@ type PolicyAssociationRequest struct {
 	TimeZone          string                  `json:"timeZone,omitempty" yaml:"timeZone" bson:"timeZone" mapstructure:"TimeZone"`
 	ServingPlmn       *NetworkId              `json:"servingPlmn,omitempty" yaml:"servingPlmn" bson:"servingPlmn" mapstructure:"ServingPlmn"`
 	RatType           RatType                 `json:"ratType,omitempty" yaml:"ratType" bson:"ratType" mapstructure:"RatType"`
+	RatTypes          []RatType                 `json:"ratTypes,omitempty" yaml:"ratTypes" bson:"ratTypes" mapstructure:"RatTypes"`
 	GroupIds          []string                `json:"groupIds,omitempty" yaml:"groupIds" bson:"groupIds" mapstructure:"GroupIds"`
 	ServAreaRes       *ServiceAreaRestriction `json:"servAreaRes,omitempty" yaml:"servAreaRes" bson:"servAreaRes" mapstructure:"ServAreaRes"`
 	Rfsp              int32                   `json:"rfsp,omitempty" yaml:"rfsp" bson:"rfsp" mapstructure:"Rfsp"`
