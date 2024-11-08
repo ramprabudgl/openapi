@@ -38,6 +38,10 @@ type PolicyAssociationRequest struct {
 	UeAmbr            *UeAmbr    `json:"ueAmbr,omitempty" yaml:"ueAmbr" bson:"ueAmbr" mapstructure:"UeAmbr"`
 	N3gAllowedSnssais []string   `json:"n3gAllowedSnssais,omitempty" yaml:"n3gAllowedSnssais" bson:"n3gAllowedSnssais" mapstructure:"N3gAllowedSnssais"`
 	MappingSnssais    []string   `json:"mappingSnssais,omitempty" yaml:"mappingSnssais" bson:"mappingSnssais" mapstructure:"MappingSnssais"`
+        //MappingSnssais []MappingOfSnssai `json:"mappingSnssais,omitempty" yaml:"mappingSnssais" bson:"mappingSnssais" mapstructure:"mappingSnssais"` //RQIMPL-A
+	//ServiceName    ServiceName       `json:"serviceName,omitempty" yaml:"serviceName" bson:"serviceName" mapstructure:"serviceName"`             //RQIMPL-A
+        //AllowedSnssais []Snssai          `json:"allowedSnssais,omitempty" yaml:"allowedSnssais" bson:"allowedSnssais" mapstructure:"allowedSnssais"` //RQIMPL-A
+	
 }
 type UeAmbr struct {
 	Uplink   int64 `json:"uplink,omitempty"`   // Uplink maximum bit rate in bps
