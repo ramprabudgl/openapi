@@ -15,6 +15,8 @@ type PolicyAssociationUpdateRequest struct {
 	AltNotifIpv4Addrs []string `json:"altNotifIpv4Addrs,omitempty" yaml:"altNotifIpv4Addrs" bson:"altNotifIpv4Addrs" mapstructure:"AltNotifIpv4Addrs"`
 	// Alternate or backup IPv6 Address(es) where to send Notifications.
 	AltNotifIpv6Addrs []string `json:"altNotifIpv6Addrs,omitempty" yaml:"altNotifIpv6Addrs" bson:"altNotifIpv6Addrs" mapstructure:"AltNotifIpv6Addrs"`
+	
+	
 	// Request Triggers that the NF service consumer observes.
 	Triggers    []RequestTrigger        `json:"triggers,omitempty" yaml:"triggers" bson:"triggers" mapstructure:"Triggers"`
 	ServAreaRes *ServiceAreaRestriction `json:"servAreaRes,omitempty" yaml:"servAreaRes" bson:"servAreaRes" mapstructure:"ServAreaRes"`
@@ -23,4 +25,13 @@ type PolicyAssociationUpdateRequest struct {
 	PraStatuses map[string]PresenceInfo `json:"praStatuses,omitempty" yaml:"praStatuses" bson:"praStatuses" mapstructure:"PraStatuses"`
 	UserLoc     *UserLocation           `json:"userLoc,omitempty" yaml:"userLoc" bson:"userLoc" mapstructure:"UserLoc"`
 	TraceReq    *TraceData              `json:"traceReq,omitempty" yaml:"traceReq" bson:"traceReq" mapstructure:"TraceReq"`
+      //nre parameters
+	AltNotifFqdns     []string `json:"altNotifFqdns,omitempty" yaml:"altNotifFqdns" bson:"altNotifFqdns" mapstructure:"AltNotifFqdns"`
+        SmfSelInfo        *SmfSelectionData `json:"smfSelInfo,omitempty" yaml:"smfSelInfo" bson:"smfSelInfo" mapstructure:"SmfSelInfo"`
+	UeAmbr            *Ambr             `json:"ueAmbr,omitempty" yaml:"ueAmbr" bson:"ueAmbr" mapstructure:"UeAmbr"`
+	AllowedSnssais    []Snssai          `json:"allowedSnssais,omitempty" yaml:"allowedSnssais" bson:"allowedSnssais" mapstructure:"AllowedSnssais"`
+	MappingSnssais    []MappingOfSnssai `json:"mappingSnssais,omitempty" yaml:"mappingSnssais" bson:"mappingSnssais" mapstructure:"MappingSnssais"`
+	N3gAllowedSnssais []Snssai          `json:"n3gAllowedSnssais,omitempty" yaml:"n3gAllowedSnssais" bson:"n3gAllowedSnssais" mapstructure:"N3gAllowedSnssais"`
+	AccessTypes       []AccessType      `json:"accessTypes,omitempty" yaml:"accessTypes" bson:"accessTypes" mapstructure:"AccessTypes"`
+	Guami             *Guami            `json:"guami,omitempty" yaml:"guami" bson:"guami" mapstructure:"Guami"`
 }
