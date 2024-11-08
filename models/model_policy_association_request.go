@@ -15,6 +15,7 @@ type PolicyAssociationRequest struct {
 	AltNotifIpv4Addrs []string `json:"altNotifIpv4Addrs,omitempty" yaml:"altNotifIpv4Addrs" bson:"altNotifIpv4Addrs" mapstructure:"AltNotifIpv4Addrs"`
 	// Alternate or backup IPv6 Address(es) where to send Notifications.
 	AltNotifIpv6Addrs []string                `json:"altNotifIpv6Addrs,omitempty" yaml:"altNotifIpv6Addrs" bson:"altNotifIpv6Addrs" mapstructure:"AltNotifIpv6Addrs"`
+	AltNotifFqdns     []string                `json:"altNotifFqdns,omitempty" yaml:"altNotifFqdns" bson:"altNotifFqdns" mapstructure:"altNotifFqdns"`
 	Supi              string                  `json:"supi" yaml:"supi" bson:"supi" mapstructure:"Supi"`
 	Gpsi              string                  `json:"gpsi,omitempty" yaml:"gpsi" bson:"gpsi" mapstructure:"Gpsi"`
 	AccessType        AccessType              `json:"accessType,omitempty" yaml:"accessType" bson:"accessType" mapstructure:"AccessType"`
@@ -32,4 +33,13 @@ type PolicyAssociationRequest struct {
 	ServiveName string     `json:"serviveName,omitempty" yaml:"serviveName" bson:"serviveName" mapstructure:"ServiveName"`
 	TraceReq    *TraceData `json:"traceReq,omitempty" yaml:"traceReq" bson:"traceReq" mapstructure:"TraceReq"`
 	SuppFeat    string     `json:"suppFeat" yaml:"suppFeat" bson:"suppFeat" mapstructure:"SuppFeat"`
+	AllowedNssai      []string   `json:"allowedNssai,omitempty"`
+	AllowedSnssais    []string   `json:"allowedSnssais,omitempty" yaml:"allowedSnssais" bson:"allowedSnssais" mapstructure:"AllowedSnssais"`
+	UeAmbr            *UeAmbr    `json:"ueAmbr,omitempty" yaml:"ueAmbr" bson:"ueAmbr" mapstructure:"UeAmbr"`
+	N3gAllowedSnssais []string   `json:"n3gAllowedSnssais,omitempty" yaml:"n3gAllowedSnssais" bson:"n3gAllowedSnssais" mapstructure:"N3gAllowedSnssais"`
+	MappingSnssais    []string   `json:"mappingSnssais,omitempty" yaml:"mappingSnssais" bson:"mappingSnssais" mapstructure:"MappingSnssais"`
+}
+type UeAmbr struct {
+	Uplink   int64 `json:"uplink,omitempty"`   // Uplink maximum bit rate in bps
+	Downlink int64 `json:"downlink,omitempty"` // Downlink maximum bit rate in bps
 }
