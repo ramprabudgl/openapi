@@ -34,13 +34,13 @@ type PolicyAssociationRequest struct {
 	TraceReq    *TraceData `json:"traceReq,omitempty" yaml:"traceReq" bson:"traceReq" mapstructure:"TraceReq"`
 	SuppFeat    string     `json:"suppFeat" yaml:"suppFeat" bson:"suppFeat" mapstructure:"SuppFeat"`
 	AllowedNssai      []string   `json:"allowedNssai,omitempty"`
-	AllowedSnssais    []string   `json:"allowedSnssais,omitempty" yaml:"allowedSnssais" bson:"allowedSnssais" mapstructure:"AllowedSnssais"`
+	//AllowedSnssais    []string   `json:"allowedSnssais,omitempty" yaml:"allowedSnssais" bson:"allowedSnssais" mapstructure:"AllowedSnssais"`
 	UeAmbr            *UeAmbr    `json:"ueAmbr,omitempty" yaml:"ueAmbr" bson:"ueAmbr" mapstructure:"UeAmbr"`
 	N3gAllowedSnssais []string   `json:"n3gAllowedSnssais,omitempty" yaml:"n3gAllowedSnssais" bson:"n3gAllowedSnssais" mapstructure:"N3gAllowedSnssais"`
-	MappingSnssais    []string   `json:"mappingSnssais,omitempty" yaml:"mappingSnssais" bson:"mappingSnssais" mapstructure:"MappingSnssais"`
-        //MappingSnssais []MappingOfSnssai `json:"mappingSnssais,omitempty" yaml:"mappingSnssais" bson:"mappingSnssais" mapstructure:"mappingSnssais"` //RQIMPL-A
-	//ServiceName    ServiceName       `json:"serviceName,omitempty" yaml:"serviceName" bson:"serviceName" mapstructure:"serviceName"`             //RQIMPL-A
-        //AllowedSnssais []Snssai          `json:"allowedSnssais,omitempty" yaml:"allowedSnssais" bson:"allowedSnssais" mapstructure:"allowedSnssais"` //RQIMPL-A
+	//MappingSnssais    []string   `json:"mappingSnssais,omitempty" yaml:"mappingSnssais" bson:"mappingSnssais" mapstructure:"MappingSnssais"`
+        MappingSnssais []MappingOfSnssai `json:"mappingSnssais,omitempty" yaml:"mappingSnssais" bson:"mappingSnssais" mapstructure:"mappingSnssais"` //RQIMPL-A
+	ServiceName    ServiceName       `json:"serviceName,omitempty" yaml:"serviceName" bson:"serviceName" mapstructure:"serviceName"`             //RQIMPL-A
+        AllowedSnssais []Snssai          `json:"allowedSnssais,omitempty" yaml:"allowedSnssais" bson:"allowedSnssais" mapstructure:"allowedSnssais"` //RQIMPL-A
 	
 }
 type UeAmbr struct {
