@@ -16,5 +16,22 @@ type PolicyAssociation struct {
 	ServAreaRes *ServiceAreaRestriction `json:"servAreaRes,omitempty" yaml:"servAreaRes" bson:"servAreaRes" mapstructure:"ServAreaRes"`
 	Rfsp        int32                   `json:"rfsp,omitempty" yaml:"rfsp" bson:"rfsp" mapstructure:"Rfsp"`
 	Pras        map[string]PresenceInfo `json:"pras,omitempty" yaml:"pras" bson:"pras" mapstructure:"Pras"`
+	Supi              string                  `json:"supi" yaml:"supi" bson:"supi" mapstructure:"Supi"`
+	Gpsi              string                  `json:"gpsi,omitempty" yaml:"gpsi" bson:"gpsi" mapstructure:"Gpsi"`
+	Pei               string                  `json:"pei,omitempty" yaml:"pei" bson:"pei" mapstructure:"Pei"`
+	ServingPlmn       *NetworkId              `json:"servingPlmn,omitempty" yaml:"servingPlmn" bson:"servingPlmn" mapstructure:"ServingPlmn"`
+	RatType           RatType                 `json:"ratType,omitempty" yaml:"ratType" bson:"ratType" mapstructure:"RatType"`
+	RatTypes          []RatType                 `json:"ratTypes,omitempty" yaml:"ratTypes" bson:"ratTypes" mapstructure:"RatTypes"`
+	TimeZone          string                  `json:"timeZone,omitempty" yaml:"timeZone" bson:"timeZone" mapstructure:"TimeZone"`
+	Guami             *Guami                  `json:"guami,omitempty" yaml:"guami" bson:"guami" mapstructure:"Guami"`
 	SuppFeat    string                  `json:"suppFeat" yaml:"suppFeat" bson:"suppFeat" mapstructure:"SuppFeat"`
+ MappingSnssais []MappingOfSnssai `json:"mappingSnssais,omitempty" yaml:"mappingSnssais" bson:"mappingSnssais" mapstructure:"mappingSnssais"` //RQIMPL-A
+	ServiceName    ServiceName       `json:"serviceName,omitempty" yaml:"serviceName" bson:"serviceName" mapstructure:"serviceName"`             //RQIMPL-A
+        AllowedSnssais []Snssai          `json:"allowedSnssais,omitempty" yaml:"allowedSnssais" bson:"allowedSnssais" mapstructure:"allowedSnssais"` //RQIMPL-A
+	AltNotifIpv4Addrs []string `json:"altNotifIpv4Addrs,omitempty" yaml:"altNotifIpv4Addrs" bson:"altNotifIpv4Addrs" mapstructure:"AltNotifIpv4Addrs"`
+	// Alternate or backup IPv6 Address(es) where to send Notifications.
+	AltNotifIpv6Addrs []string                `json:"altNotifIpv6Addrs,omitempty" yaml:"altNotifIpv6Addrs" bson:"altNotifIpv6Addrs" mapstructure:"AltNotifIpv6Addrs"`
+	AltNotifFqdns     []string                `json:"altNotifFqdns,omitempty" yaml:"altNotifFqdns" bson:"altNotifFqdns" mapstructure:"altNotifFqdns"`
+	AccessType        AccessType              `json:"accessType,omitempty" yaml:"accessType" bson:"accessType" mapstructure:"AccessType"`
+	UeAmbr            *Ambr    `json:"ueAmbr,omitempty" yaml:"ueAmbr" bson:"ueAmbr" mapstructure:"UeAmbr"`
 }
