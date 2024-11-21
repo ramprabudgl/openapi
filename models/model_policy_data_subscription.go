@@ -13,6 +13,9 @@ package models
 type PolicyDataSubscription struct {
 	// string providing an URI formatted according to IETF RFC 3986.
 	NotificationUri       string   `json:"notificationUri" bson:"notificationUri"`
+	NotifId              string              `json:"notifId" bson:"notifId"`
+	Expiry               time.Time           `json:"expiry" bson:"expiry"` 
 	MonitoredResourceUris []string `json:"monitoredResourceUris" bson:"monitoredResourceUris"`
+	MonResItems          []string      `json:"monResItems" bson:"monResItems"`         // Array of ResourceItems
 	SupportedFeatures     string   `json:"supportedFeatures,omitempty" bson:"supportedFeatures"`
 }
