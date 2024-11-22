@@ -34,4 +34,8 @@ type PolicyAssociationUpdateRequest struct {
 	N3gAllowedSnssais []Snssai          `json:"n3gAllowedSnssais,omitempty" yaml:"n3gAllowedSnssais" bson:"n3gAllowedSnssais" mapstructure:"N3gAllowedSnssais"`
 	AccessTypes       []AccessType      `json:"accessTypes,omitempty" yaml:"accessTypes" bson:"accessTypes" mapstructure:"AccessTypes"`
 	Guami             *Guami            `json:"guami,omitempty" yaml:"guami" bson:"guami" mapstructure:"Guami"`
+
+	// newly added
+	RatType  RatType   `json:"ratType,omitempty" yaml:"ratType" bson:"ratType" mapstructure:"RatType"`
+	RatTypes []RatType `json:"ratTypes,omitempty" yaml:"ratTypes" bson:"ratTypes" mapstructure:"RatTypes"`
 }
