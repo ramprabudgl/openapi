@@ -18,6 +18,7 @@ type PolicyAssociationRequest struct {
 	Supi              string                  `json:"supi" yaml:"supi" bson:"supi" mapstructure:"Supi"`
 	Gpsi              string                  `json:"gpsi,omitempty" yaml:"gpsi" bson:"gpsi" mapstructure:"Gpsi"`
 	AccessType        AccessType              `json:"accessType,omitempty" yaml:"accessType" bson:"accessType" mapstructure:"AccessType"`
+	AccessTypes       []AccessType            `json:"accessTypes,omitempty" yaml:"accessTypes" bson:"accessTypes" mapstructure:"AccessTypes"`
 	Pei               string                  `json:"pei,omitempty" yaml:"pei" bson:"pei" mapstructure:"Pei"`
 	UserLoc           *UserLocation           `json:"userLoc,omitempty" yaml:"userLoc" bson:"userLoc" mapstructure:"UserLoc"`
 	TimeZone          string                  `json:"timeZone,omitempty" yaml:"timeZone" bson:"timeZone" mapstructure:"TimeZone"`
