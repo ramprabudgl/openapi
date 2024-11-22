@@ -28,5 +28,11 @@ type PolicyUpdate struct {
 	Guami             *Guami            `json:"guami,omitempty" yaml:"guami" bson:"guami" mapstructure:"Guami"`
 	UserLoc           *UserLocation     `json:"userLoc,omitempty" yaml:"userLoc" bson:"userLoc" mapstructure:"UserLoc"`
 	TraceReq          *TraceData        `json:"traceReq,omitempty" yaml:"traceReq" bson:"traceReq" mapstructure:"TraceReq"`
-
+        //new parameter added
+	RatType           RatType   `json:"ratType,omitempty" yaml:"ratType" bson:"ratType" mapstructure:"RatType"`
+	RatTypes          []RatType `json:"ratTypes,omitempty" yaml:"ratTypes" bson:"ratTypes" mapstructure:"RatTypes"`
+	AltNotifIpv4Addrs []string  `json:"altNotifIpv4Addrs,omitempty" yaml:"altNotifIpv4Addrs" bson:"altNotifIpv4Addrs" mapstructure:"AltNotifIpv4Addrs"`
+	// Alternate or backup IPv6 Address(es) where to send Notifications.
+	AltNotifIpv6Addrs []string   `json:"altNotifIpv6Addrs,omitempty" yaml:"altNotifIpv6Addrs" bson:"altNotifIpv6Addrs" mapstructure:"AltNotifIpv6Addrs"`
+	AccessType        AccessType `json:"accessType,omitempty" yaml:"accessType" bson:"accessType" mapstructure:"AccessType"`
 }
