@@ -346,9 +346,7 @@ func (a *DefaultCallbackApiService) PolicyUpdate(ctx context.Context, notifyUrl 
 
 	//made changes
 	localVarPath := notifyUrl
-
-	fmt.Println("Inside  policyUpdate send response to AMF localVarPath-----", localVarPath)
-
+	
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
