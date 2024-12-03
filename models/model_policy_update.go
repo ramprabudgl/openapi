@@ -35,4 +35,5 @@ type PolicyUpdate struct {
 	// Alternate or backup IPv6 Address(es) where to send Notifications.
 	AltNotifIpv6Addrs []string   `json:"altNotifIpv6Addrs,omitempty" yaml:"altNotifIpv6Addrs" bson:"altNotifIpv6Addrs" mapstructure:"AltNotifIpv6Addrs"`
 	AccessType        AccessType `json:"accessType,omitempty" yaml:"accessType" bson:"accessType" mapstructure:"AccessType"`
+	NotificationUri string `json:"notificationUri" yaml:"notificationUri" bson:"notificationUri" mapstructure:"NotificationUri"`
 }
