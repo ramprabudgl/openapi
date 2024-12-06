@@ -18,4 +18,5 @@ type PolicyDataSubscription struct {
 	MonitoredResourceUris []string `json:"monitoredResourceUris" bson:"monitoredResourceUris"`
 	MonResItems          []string      `json:"monResItems" bson:"monResItems"`         // Array of ResourceItems
 	SupportedFeatures     string   `json:"supportedFeatures,omitempty" bson:"supportedFeatures"`
+	SubscriptionId        string   `json:"subscriptionId"` // Added field for Subscription ID
 }
