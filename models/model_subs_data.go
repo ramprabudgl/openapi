@@ -1,9 +1,5 @@
 package models
 
-import (
-	"github.com/free5gc/openapi/models"
-)
-
 type SubsData struct {
 	PlmnID                            string                                     `json:"plmnID"`
 	UeId                              string                                     `json:"ueId"`
