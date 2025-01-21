@@ -179,7 +179,7 @@ func (a *DefaultCallbackApi) SmPolicyControlTerminationRequestNotification(ctx c
 	)
 
 	// create path and map variables
-	localVarPath := notificationUri
+	localVarPath := notificationUri + "/terminate"
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
