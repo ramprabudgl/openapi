@@ -22,4 +22,6 @@ type PolicyDataChangeNotification struct {
 	BdtRefId                string                   `json:"bdtRefId,omitempty" yaml:"bdtRefId" bson:"bdtRefId" mapstructure:"BdtRefId"`
 	UsageMonId              string                   `json:"usageMonId,omitempty" yaml:"usageMonId" bson:"usageMonId" mapstructure:"UsageMonId"`
 	DelResources 		[]string    		 `json:"delResources"`
+	DelData                 []string                 `json:"delData"`
 }
+
